@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: sonar
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: sonar
+      labels:
+        name: sonar
+    spec:
+      containers:
+        - image: sonarqube:latest
+          name: sonar
+          ports:
+            - containerPort: 9000
+              name: sonar
