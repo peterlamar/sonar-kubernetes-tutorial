@@ -132,13 +132,19 @@ kubernetes   ClusterIP   10.96.0.1       <none>        443/TCP        25d
 sonar        NodePort    10.99.147.104   <none>        80:30029/TCP   1h
 ```
 
-Looks good, lets access it with our browser.
+Looks good, lets access it with our browser. 
 
 ```
 minikube service sonar
 ```
 
 This should fire up a browser with a running Sonar instance.
+
+Note: If things are not looking good, a kubectl describe service call can be helpful. 
+
+```
+kubectl describe service sonar
+```
 
 #### Public Cloud
 
